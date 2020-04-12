@@ -6,7 +6,7 @@
     <th>Name</th>
     <th>Email</th>
   </tr>
-  <tr *ngFor="let user of users">
+  <tr *ngFor="let user of users | paginate: {itemsPerPage: 7, currentPage: p}; let i = index">
     <td>{{user.id}}</td>
     <td>
       <a routerLink="/user" [queryParams]="{id: user.id}">{{user.username}}</a>
@@ -14,3 +14,7 @@
     <td>{{user.email}}</td>
   </tr>
 </table>
+
+
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

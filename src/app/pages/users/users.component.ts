@@ -15,7 +15,7 @@ import { Router } from "@angular/router";
 export class UsersComponent implements OnInit {
 
   private users: User[] = [];
-
+  p: number = 1;
   private headers = new HttpHeaders().set(
     "User_token", this.authenticationService.getToken()
   );

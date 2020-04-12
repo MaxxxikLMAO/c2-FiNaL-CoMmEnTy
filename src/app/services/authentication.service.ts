@@ -33,8 +33,8 @@ export class AuthenticationService implements OnInit{
       email, password
     }).pipe(  // trochu jinačí subscribe
       map<Token, Token>(i => {
-        this.token = i.access_token;
-        localStorage.setItem("access-token", i.access_token);
+        this.token = i.access_token; // access-token
+        localStorage.setItem("access-token", i.access_token); // ukládání do local storage
         return i;
       })
     );
