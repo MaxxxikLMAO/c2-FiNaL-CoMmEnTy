@@ -10,6 +10,7 @@ import { UsersComponent } from './pages/users/users.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserComponent } from './pages/user/user.component';
+import { CommentsComponent } from './pages/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UserComponent } from './pages/user/user.component';
     RegisterComponent,
     HomeComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

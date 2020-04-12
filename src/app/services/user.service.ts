@@ -16,10 +16,10 @@ export class UserService {
     private authenticationService: AuthenticationService
   ) { }
 
-  public getUsers(): Observable<UsersList> {
+  public getUsers(id: number): Observable<UsersList> {
     const headers = new HttpHeaders()
       .set('User-Token', this.authenticationService.getToken());
 
-    return this.httpClient.get<UsersList>(httpConfig.url + '/users', {headers});
+    return this.httpClient.get<UsersList>(httpConfig.url + '/users?page=' + id, {headers});
   }
 }
