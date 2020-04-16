@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import { UserComponent } from './pages/user/user.component';
 import { CommentsComponent } from './pages/comments/comments.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { LogoutComponent } from './pages/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HomeComponent,
     UsersComponent,
     UserComponent,
-    CommentsComponent
+    CommentsComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
